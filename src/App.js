@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 
+import UseState from "./components/useState/UseState";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="container pt-5">
+      <Tabs defaultActiveKey="useState" id="uncontrolled-tab">
+        <Tab eventKey="useState" title="useState">
+          <UseState />
+        </Tab>
+        <Tab eventKey="useEffect" title="useEffect"></Tab>
+      </Tabs>
+    </Container>
   );
 }
 
