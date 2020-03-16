@@ -13,7 +13,7 @@ function UseEffect() {
 
   useEffect(() => {
     console.log("useEffect - Updating document title ");
-    document.title = `You clicked ${count} times`;
+    document.title = count === 0 ? "React-Hooks" : `You clicked ${count} times`;
   }, [count]);
 
   const [count2, setCount2] = useState(0);
@@ -86,7 +86,6 @@ function UseEffect() {
 				))}
 			</ul> */}
             </div>
-            <div className="row p-2 border-bottom pt-5"></div>
           </div>
         </div>
       </div>

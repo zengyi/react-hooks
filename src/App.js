@@ -6,6 +6,7 @@ import Tab from "react-bootstrap/Tab";
 import UseState from "./components/useState/UseState";
 import UseEffect from "./components/useEffect/UseEffect";
 import UseContext from "./components/useContext/UseContext";
+import UseReducer from "./components/useReducer/UseReducer";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -24,6 +25,9 @@ function App() {
             </Tab>
             <Tab eventKey="useContext" title="useContext">
               <UseContext />
+            </Tab>
+            <Tab eventKey="useReducer" title="useReducer">
+              <UseReducer />
             </Tab>
           </Tabs>
         </Container>
